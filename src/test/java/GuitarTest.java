@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class GuitarTest {
 
@@ -34,5 +35,24 @@ public class GuitarTest {
         assertEquals(true, lesPaul.isElectric());
     }
 
+    @Test
+    public void canPlay(){
+        assertEquals("I'm a geetawr", lesPaul.play());
+    }
+
+    @Test
+    public void canGetCostPrice(){
+        assertEquals(350.00, lesPaul.getCostPrice(), 0);
+    }
+
+    @Test
+    public void canGetRetailPrice(){
+        assertEquals(599.00, lesPaul.getRetailPrice(), 0);
+    }
+
+    @Test
+    public void canGetMarkup(){
+        assertEquals(249.00, lesPaul.calculateMarkup(), 0);
+    }
 
 }
