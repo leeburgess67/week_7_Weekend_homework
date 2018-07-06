@@ -7,9 +7,11 @@ import java.util.ArrayList;
 public class Shop {
 
     private ArrayList<ISell> products;
+    private double till;
 
     public Shop(ArrayList<ISell> products){
         this.products = products;
+        this.till = 100.00;//opening float
     }
 
     public ArrayList<ISell> getProducts() {
@@ -20,6 +22,9 @@ public class Shop {
         products.add(item);
     }
 
+    public double getTill() {
+        return till;
+    }
 
     public double getTotalValueAtCostPrice() {
         double costPriceTotal = 0.0;
@@ -37,6 +42,19 @@ public class Shop {
         return retailPriceTotal;
     }
 
+    public double getTotalProfit(){
+        return getTotalValueAtRetailPrice() - getTotalValueAtCostPrice();
+    }
+
+    public void sellItem(ISell item){
+        till += item.getRetailPrice();
+    }
 
 
-}
+
+
+    }
+
+
+
+

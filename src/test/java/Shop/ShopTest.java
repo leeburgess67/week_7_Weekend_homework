@@ -54,4 +54,17 @@ public class ShopTest {
     public void canGetTotalStockValue__RetailPrice(){
         assertEquals(15.98, shop.getTotalValueAtRetailPrice(), 0);
     }
+
+    @Test
+    public void canGetTotalStockValue__Profit(){
+        assertEquals(7.48, shop.getTotalProfit(), 0);
+    }
+
+    @Test
+    public void tillIncreasesWithSale(){
+        shop.sellItem(drums);
+        assertEquals(799.00, shop.getTill(), 0);
+    }
+
+
 }
