@@ -11,7 +11,7 @@ public class Shop {
 
     public Shop(ArrayList<ISell> products){
         this.products = products;
-        this.till = 100.00;//opening float
+        this.till = 1000.00;//opening float
     }
 
     public ArrayList<ISell> getProducts() {
@@ -51,9 +51,10 @@ public class Shop {
     }
 
 
-
-
+    public void refundItem(ISell item) {
+        till -= item.getRetailPrice();
     }
+}
 
 
 

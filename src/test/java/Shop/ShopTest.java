@@ -63,7 +63,13 @@ public class ShopTest {
     @Test
     public void tillIncreasesWithSale(){
         shop.sellItem(drums);
-        assertEquals(799.00, shop.getTill(), 0);
+        assertEquals(1699.00, shop.getTill(), 0);
+    }
+
+    @Test
+    public void tillDecreasesWithRefund(){
+        shop.refundItem(drums);
+        assertEquals(301, shop.getTill(), 0);
     }
 
 
