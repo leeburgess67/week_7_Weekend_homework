@@ -12,6 +12,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class CustomerTest {
 
@@ -35,6 +36,22 @@ public class CustomerTest {
         products.add(sheetMusic);
 
         shop = new Shop(products);
+    }
+
+    @Test
+    public void canGetName(){
+        assertEquals("Jimbo", customer1.getName());
+    }
+
+    @Test
+    public void canGetWallet(){
+        assertEquals(1000, customer1.getWallet(),0);
+    }
+
+    @Test
+    public void canGetBasket(){
+        customer1.purchaseItem(strings, shop);
+        assertEquals(1, customer1.getBasket().size());
     }
 
     @Test
