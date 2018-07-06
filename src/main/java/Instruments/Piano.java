@@ -3,15 +3,15 @@ package Instruments;
 import Interfaces.IPlay;
 import Interfaces.ISell;
 
-public class Piano  extends Instrument implements IPlay, ISell {
+public class Piano extends Instrument implements IPlay, ISell {
 
     double costPrice;
-    double retaiPrice;
+    double retailPrice;
 
-    public Piano(String name, String colour, String material, boolean isElectric, InstrumentType instrumentType, double costPrice, double retaiPrice) {
+    public Piano(String name, String colour, String material, boolean isElectric, InstrumentType instrumentType, double costPrice, double retailPrice) {
         super(name, colour, material, isElectric, instrumentType);
         this.costPrice = costPrice;
-        this.retaiPrice = retaiPrice;
+        this.retailPrice = retailPrice;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class Piano  extends Instrument implements IPlay, ISell {
 
     @Override
     public double calculateMarkup() {
-        return retaiPrice - costPrice;
+        return retailPrice - costPrice;
     }
 
     @Override
@@ -31,6 +31,6 @@ public class Piano  extends Instrument implements IPlay, ISell {
 
     @Override
     public double getRetailPrice() {
-        return this.retaiPrice;
+        return this.retailPrice;
     }
 }

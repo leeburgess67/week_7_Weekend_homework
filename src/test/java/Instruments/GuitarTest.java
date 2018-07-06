@@ -1,10 +1,11 @@
+package Instruments;
+
 import Instruments.Guitar;
 import Instruments.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 
 public class GuitarTest {
 
@@ -36,6 +37,11 @@ public class GuitarTest {
     }
 
     @Test
+    public void canGetType(){
+        assertEquals(InstrumentType.STRINGS, lesPaul.getInstrumentType());
+    }
+
+    @Test
     public void canPlay(){
         assertEquals("I'm a geetawr", lesPaul.play());
     }
@@ -54,5 +60,7 @@ public class GuitarTest {
     public void canGetMarkup(){
         assertEquals(249.00, lesPaul.calculateMarkup(), 0);
     }
+
+
 
 }
