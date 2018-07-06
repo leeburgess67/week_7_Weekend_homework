@@ -1,7 +1,6 @@
 package Instruments;
 
-import Instruments.Guitar;
-import Instruments.InstrumentType;
+import Instruments.ENUMS.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,5 +1,6 @@
 package Instruments;
 
+import Instruments.ENUMS.InstrumentType;
 import Interfaces.IPlay;
 import Interfaces.ISell;
 

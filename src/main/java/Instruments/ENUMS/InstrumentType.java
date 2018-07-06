@@ -1,4 +1,4 @@
-package Instruments;
+package Instruments.ENUMS;
 
 public enum InstrumentType {
     BRASS,

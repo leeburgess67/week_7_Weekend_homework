@@ -1,5 +1,6 @@
 package Instruments;
 
+import Instruments.ENUMS.InstrumentType;
 import org.junit.Before;
 import org.junit.Test;
 

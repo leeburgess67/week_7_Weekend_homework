@@ -1,5 +1,7 @@
 package Instruments;
 
+import Instruments.ENUMS.InstrumentType;
+
 public abstract class Instrument {
 
     private String name;
