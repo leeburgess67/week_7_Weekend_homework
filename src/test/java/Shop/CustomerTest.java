@@ -4,7 +4,6 @@ import Accessories.GuitarStrings;
 import Accessories.SheetMusic;
 import Instruments.Drums;
 import Instruments.ENUMS.InstrumentType;
-import Instruments.Guitar;
 import Interfaces.ISell;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +11,6 @@ import org.junit.Test;
 import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 
 public class CustomerTest {
 
